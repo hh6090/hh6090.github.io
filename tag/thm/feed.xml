@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="/tag/thm/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2022-11-29T15:17:07+00:00</updated>
+  <id>/tag/thm/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">hh609 | </title>
+  
+
+  
+    <subtitle>The professional publishing platform</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">THM Room Writeup: Networking Basics</title>
+      <link href="/welcome" rel="alternate" type="text/html" title="THM Room Writeup: Networking Basics" />
+      <published>2022-09-25T10:00:00+00:00</published>
+      <updated>2022-09-25T10:00:00+00:00</updated>
+      <id>/welcome</id>
+      <content type="html" xml:base="/welcome">&lt;p&gt;TryHackMe has a couple of networking basics modules that are meant to teach the fundamentals of computer
+networking. I’ve taken a couple of intro networking classes already, but I’ve found THM’s format to 
+be exremely easy to understand and great for learning/review!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;what-is-a-network-and-what-is-the-internet&quot;&gt;What is a network, and what is the Internet?&lt;/h3&gt;
+&lt;p&gt;A network is a system of interconnected devices (in the case of the internet. Postal systems 
+also count as networks!) Networks can be public or private.&lt;/p&gt;
+
+&lt;p&gt;The Internet is a giant network! It’s made up of multiple smaller networks that are connected. 
+The small networks are private networks while the networks that connect the networks are public networks.&lt;/p&gt;
+
+&lt;p&gt;History: The ARPANET project in the 1960s by the U.S. Defence Department was the first network 
+documented. Today, we use the World Wide Web - invented by Tim Berners-Lee!&lt;/p&gt;
+
+&lt;h3 id=&quot;identifying-devices-on-a-network---ip-and-mac-addresses&quot;&gt;Identifying Devices on a Network - IP and MAC addresses&lt;/h3&gt;
+&lt;p&gt;Devices must be able to be identified on a network in order to communicate. Devices all have an Internet 
+Protocol (IP) address and a Media Access Control (MAC) address. IP addresses can identify hosts on a 
+network - but it can also change devices. They’re made up of four octets (0-255) and follow potocols (
+a set of standards). Public addresses are used to identify devices across the Internet while private 
+addresses are used to identify devices among other devices. MAC addresses are unique addresses - a 
+12-character hexadecimal number that is assigned by the factory the physical network interface (microchip 
+board on the motherboard) was built at. The first six characters stand for the company and the last 
+six is the unique number. Two devices won’t have the same MAC address. The MAC address always stays 
+with its device. However, MAC addresses can be “spoofed” or faked, where a networked device can pretend 
+to be another one by using that one’s MAC address.&lt;/p&gt;
+
+&lt;h3 id=&quot;icmp-ping&quot;&gt;ICMP Ping&lt;/h3&gt;
+&lt;p&gt;Ping is a fundamental network tool that is versatile. It uses Internet Control Message Protocol (ICMP) 
+packets to check the connection between devices - does the connection exist? Is the connection 
+reliable? Ping measures the time taken for ICMP packets to travel between devices, done by using 
+ICMP echo packet and echo reply. Ping can be used against both devices on a network with IP addresses, 
+and on websites with URLs. 
+Performing a ping is easy:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ping IPaddress/websiteURL
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;lan-topology&quot;&gt;LAN Topology&lt;/h3&gt;
+&lt;p&gt;LAN stands for Local Area Network. Topology is just the design of a network.&lt;/p&gt;
+
+&lt;h5 id=&quot;star-topology&quot;&gt;Star Topology&lt;/h5&gt;
+&lt;p&gt;Devices are all individually connected to a central networking device, such as a switch or router. This 
+topology has a high cost but is also highly reliably and has scalability. All devices are connected to the 
+central device so if one fails, it doesn’t take down the whole network.&lt;/p&gt;
+
+&lt;h5 id=&quot;bus-topology&quot;&gt;Bus Topology&lt;/h5&gt;
+&lt;p&gt;A bus topology has a backbone cable that acts as a single connection, where devices will branch off the backbone 
+cable like bus seats on either side of the middle row. It can become slow and bottlenecked because data must 
+travel along the same cable, and it also can make it difficult to troubleshoot a failing device. It’s a 
+cheaper option but has little redundancy (reliability) for failures.&lt;/p&gt;
+
+&lt;h5 id=&quot;ring-topology-token-topology&quot;&gt;Ring Topology (Token Topology)&lt;/h5&gt;
+&lt;p&gt;Devices are connected directly in a loop so there is less reliance on cabling and dedicaed hardware such as 
+a switch. Data moves across the loop until it reaches its destination, in only one direction. It’s easier to 
+troubleshoot but not efficient for sending data as data takes more hops across the network. It won’t be slow 
+and bottlenecked like a bus topology, but one point of failure will bring down the entire network.&lt;/p&gt;
+
+&lt;h3 id=&quot;switches-and-routers&quot;&gt;Switches and Routers&lt;/h3&gt;
+&lt;h5 id=&quot;switch&quot;&gt;Switch&lt;/h5&gt;
+&lt;p&gt;A switch is a dedicated device that connects multiple devices and keeps track of devices and the port they’re 
+connected to. switches can have reduced network traffic compared to a hub as they know where their intended 
+target of a packet is due to their stored cache and can send the packet directly to the destination.&lt;/p&gt;
+
+&lt;h5 id=&quot;router&quot;&gt;Router&lt;/h5&gt;
+&lt;p&gt;Routers are dedicated devices that connect networks so data can travel. Routing is the process of data 
+traveling across networks.&lt;/p&gt;
+
+&lt;p&gt;Switches and routers can be connected. This increases the redundancy of a network because data 
+packets will have more paths they can take if one fails.&lt;/p&gt;
+
+&lt;h3 id=&quot;subnetting&quot;&gt;Subnetting&lt;/h3&gt;
+&lt;p&gt;Subnetting is useful for categorizing parts of a network. It splits up the network and the number of hosts 
+that fit within (which is then represented by the subnet mask).&lt;/p&gt;
+
+&lt;h5 id=&quot;network-address&quot;&gt;Network Address&lt;/h5&gt;
+&lt;p&gt;Identifies the start of the network&lt;/p&gt;
+&lt;h5 id=&quot;host-address&quot;&gt;Host Address&lt;/h5&gt;
+&lt;p&gt;The device’s IP address&lt;/p&gt;
+&lt;h5 id=&quot;default-gateway&quot;&gt;Default Gateway&lt;/h5&gt;
+&lt;p&gt;A special address for a device that can send information to another network, such as a router. Usually the 
+first or last host address in a network (.1 or .254). 
+Consider a coffee shop with their register and free wifi for customers to use. Subnetting allows to keep these 
+devices in different ‘sections’ of the network.
+Subnetting is beneficial because it is efficient, gives full control and more security over your network.&lt;/p&gt;
+
+&lt;h3 id=&quot;arp-address-resolution-protocol&quot;&gt;ARP (Address Resolution Protocol)&lt;/h3&gt;
+&lt;p&gt;ARP allows devices to identify themselves on a network by associating their MAC address with an IP address. 
+How it works: A device wants to send a packet to a destination device. They will broadcast a message searching 
+for the destination device (ARP Request), asking if their MAC address matches the requested IP address. An 
+ARP Reply will be returned if the device has it. The first device will store the ARP entry in its cache.&lt;/p&gt;
+
+&lt;h3 id=&quot;dhcp-dynamic-host-configuration-protocol&quot;&gt;DHCP (Dynamic Host Configuration Protocol)&lt;/h3&gt;
+&lt;p&gt;DHCP assigns IP addresses to devices. If a device is not manually assigned one, it can send a DHCP Discover 
+request. A DHCP server on the same network can reply with a DHCP Offer, giving the device an IP address it can 
+use. The device then must send a DHCP Request reply to confirm taking that IP address, and the DHCP server will 
+send a DHCP ACK to acknowledge completion of the transaction.&lt;/p&gt;
+
+&lt;p&gt;Read about the OSI model &lt;a href=&quot;https://aerahan.github.io/the-osi-model&quot;&gt;&lt;strong&gt;here!&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Ghost</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Getting started" />
+      
+        <category term="thm" />
+      
+
+      
+        <summary type="html">TryHackMe has a couple of networking basics modules that are meant to teach the fundamentals of computer networking. I’ve taken a couple of intro networking classes already, but I’ve found THM’s format to be exremely easy to understand and great for learning/review!</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
